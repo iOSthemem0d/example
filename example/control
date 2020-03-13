@@ -1,0 +1,9 @@
+Package: com.iOSthemem0d.example
+Name: example
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: iOSthemem0d
+Author: iOSthemem0d
+Section: Tweaks

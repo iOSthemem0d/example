@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+
+       <!--This is title above the cell-->
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Example prefs?</string>
+		</dict>
+
+
+			<!--Switch Cell for Enable/Disable All Tweaks-->
+			<dict>
+				<key>cell</key>
+				<string>PSSwitchCell</string>
+				<key>default</key>
+				<false/>
+				<key>defaults</key>
+				<string>com.iOSthemem0d.exampleprefs</string> <!--add your identifier here-->
+				<key>key</key>
+				<string>enableTweak</string> <!-- This is your key and got to be match what you call your variable, in my case it's "enableTweak"-->
+				<key>label</key>
+				<string>Enable (Respring Required)</string>
+				<key>PostNotification</key>
+				<string>com.iOSthemem0d.exampleprefs/ReloadPrefs</string> <!--This check the value of switch whether the user enable/disable it you need to change the identifier and make sure you have /ReloadPrefs in the end-->
+				<key>icon</key>
+				<string>enable.png</string> <!--You can use image on left side of the cell, store the image inside resource folder or create folder "Images" then here you will need to use the directory i.e Images/enable.png-->
+			</dict>
+
+
+						<!--Haptic Feedback Strength Sedgment-->
+			<dict>
+				<key>cell</key>
+				<string>PSSegmentCell</string>
+				<key>defaults</key>
+				<string>com.iOSthemem0d.exampleprefs</string>
+				<key>key</key>
+				<string>hapticStrength</string> <!-- This is your key and got to be match what you call your variable, in my case it's "hapticStrength"-->
+				<key>label</key>
+				<string>Haptic Strength</string>
+				<key>default</key>
+				<string>0</string>
+				<key>validTitles</key>
+				<array>
+					<string>Light</string> <!-- This is the titles I added for them to show on segment-->
+					<string>Medium</string>
+					<string>Heavy</string>
+				</array>
+				<key>validValues</key>
+				<array>
+					<string>0</string> <!-- This is your values that I added in tweak "if(hapticStrength == 0) "-->
+					<string>1</string>
+					<string>2</string>
+				</array>
+				<key>id</key>
+				<string>ModeCell</string>
+				<key>PostNotification</key>
+				<string>com.iOSthemem0d.exampleprefs/ReloadPrefs</string> <!--This check the value of segment when the user select the options, you need to change the identifier and make sure you have /ReloadPrefs in the end-->
+			</dict>
+
+
+			       <!--I leave the label string blank to create a space between cells-->
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string></string>
+		</dict>
+
+
+			<!--Twitter Button -->
+			<dict>
+				<key>cellClass</key>
+				<string>HBTwitterCell</string>
+				<key>label</key>
+				<string>iOSthemem0d</string>
+				<key>user</key>
+				<string>iOSthemem0d</string>
+			</dict>
+
+
+			<!--Discord button -->
+			<dict>
+				<key>cellClass</key>
+				<string>HBLinkTableCell</string>
+				<key>label</key>
+				<string>Discord</string>
+				<key>subtitle</key>
+				<string>Support, discussion and share theme presets</string>
+				<key>icon</key>
+				<string>discord.png</string>
+				<key>url</key>
+				<string>https://discord.gg/ZSVxN4z</string>
+			</dict>
+
+
+	</array>
+	<key>title</key>
+	<string>exampleprefs</string> <!--This is the title on navigation bar & change this-->
+</dict>
+</plist>
